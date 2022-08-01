@@ -20,7 +20,6 @@ public class Epitope
 
     public static class StrongBinderFilter implements Filter
     {
-
         @Override
         public boolean test(Epitope epitope)
         {

@@ -18,18 +18,21 @@ import java.util.List;
  */
 public class NetMHCpanExcelFile
 {
-
     public static void main(String[] args) throws IOException
     {
+//        String[] files = new String[]{
+//                "ns\\nucleo_NetMHCpan_2.xlsx",
+////                "D:\\data\\fenzhD:\\data\\fenzhongxin\\pedv_proteins\\nucleo_NetMHCpan_1.xlsx",
+//////                "D:\\data\\fenzhongxin\\pedv_proteiongxin\\pedv_proteins\\nucleo_NetMHCpan_3.xlsx",
+////                "D:\\data\\fenzhongxin\\pedv_proteins\\nucleo_NetMHCpan_4.xlsx"
+//        };
+
         String[] files = new String[]{
-                "D:\\data\\fenzhongxin\\pedv_proteins\\nucleo_NetMHCpan_1.xlsx",
-                "D:\\data\\fenzhongxin\\pedv_proteins\\nucleo_NetMHCpan_2.xlsx",
-                "D:\\data\\fenzhongxin\\pedv_proteins\\nucleo_NetMHCpan_3.xlsx",
-                "D:\\data\\fenzhongxin\\pedv_proteins\\nucleo_NetMHCpan_4.xlsx"
+                "D:\\data\\nino\\influenza.xlsx",
         };
 
-        String outStrong = "D:\\data\\fenzhongxin\\pedv_proteins\\nucleo_epitope_strong.csv";
-        String outWeak = "D:\\data\\fenzhongxin\\pedv_proteins\\nucleo_epitope_weak.csv";
+        String outStrong = "D:\\data\\nino\\influenza_strong.csv";
+        String outWeak = "D:\\data\\nino\\influenza_weak.csv";
 
         write(deduplicate(join(files, new Epitope.StrongBinderFilter())), outStrong);
         write(deduplicate(join(files, new Epitope.WeakBinderFilter())), outWeak);
